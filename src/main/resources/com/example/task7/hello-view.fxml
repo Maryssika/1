@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="10" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.task7.HelloController">
+    <padding>
+        <Insets bottom="10" left="10" right="10" top="10" />
+    </padding>
+   <VBox prefHeight="86.0" prefWidth="147.0">
+      <children>
+           <Label text="Таймер" />
+           <TextField fx:id="timerField" promptText="Время" style="-fx-background-radius: 15;" />
+           <Label text="Повтор" />
+           <TextField fx:id="repeatField" promptText="Повтор" style="-fx-background-radius: 15;" />
+      </children>
+   </VBox>
+   <HBox>
+      <children>
+           <Button fx:id="startButton" onAction="#start" style="-fx-background-color: Lavender; -fx-text-fill: Black; -fx-background-radius: 20;" text="Start">
+            <HBox.margin>
+               <Insets />
+            </HBox.margin>
+         </Button>
+           <Button fx:id="stopButton" onAction="#stop" style="-fx-background-color: lightblue; -fx-text-fill: black; -fx-background-radius: 20;" text="Stop">
+            <HBox.margin>
+               <Insets left="10.0" />
+            </HBox.margin>
+         </Button>
+           <Button fx:id="resetButton" onAction="#reset" style="-fx-background-color: red; -fx-text-fill: black; -fx-background-radius: 20;" text="Clean">
+            <HBox.margin>
+               <Insets left="10.0" />
+            </HBox.margin>
+         </Button>
+      </children>
+   </HBox>
+   <VBox>
+      <children>
+           <Label text="Прошло" />
+           <TextField fx:id="textField" alignment="TOP_LEFT" editable="false" prefWidth="200" style="-fx-background-radius: 15;" />
+      </children>
+   </VBox>
+   <HBox>
+      <children>
+           <Button fx:id="textStartButton" onAction="#startText" style="-fx-background-color: lavender; -fx-text-fill: black; -fx-background-radius: 20;" text="Start" />
+           <Button fx:id="textStopButton" onAction="#stopText" style="-fx-background-color: lightblue; -fx-text-fill: black; -fx-background-radius: 20;" text="Stop">
+            <HBox.margin>
+               <Insets left="10.0" />
+            </HBox.margin>
+         </Button>
+      </children>
+   </HBox>
+   <VBox>
+      <children>
+           <Label text="Звук" />
+           <TextField fx:id="bellField" promptText="Звук" style="-fx-background-radius: 15;" />
+      </children>
+   </VBox>
+   <HBox>
+      <children>
+           <Button fx:id="bellStartButton" onAction="#startBell" style="-fx-background-color: lavender; -fx-text-fill: black; -fx-background-radius: 20;" text="Start" />
+           <Button fx:id="bellStopButton" onAction="#stopBell" style="-fx-background-color: lightblue; -fx-text-fill: black; -fx-background-radius: 20;" text="Stop">
+            <HBox.margin>
+               <Insets left="10.0" />
+            </HBox.margin>
+         </Button>
+      </children>
+   </HBox>
+   <HBox>
+      <children>
+           <Label text="Индикатор" />
+      </children>
+   </HBox>
+   <HBox>
+      <children>
+           <Button fx:id="clockStartButton" onAction="#startClock" style="-fx-background-color: lavender; -fx-text-fill: black; -fx-background-radius: 20;" text="Start" />
+           <Button fx:id="clockStopButton" onAction="#stopClock" style="-fx-background-color: lightblue; -fx-text-fill: black; -fx-background-radius: 20;" text="Stop">
+            <HBox.margin>
+               <Insets left="10.0" />
+            </HBox.margin>
+         </Button>
+      </children>
+   </HBox>
+
+    <!-- Состояние таймера -->
+    <Label fx:id="statusLabel" text="Таймер неактивен" />
+
+    <!-- Canvas для анимации -->
+    <Canvas fx:id="canvas" height="200.0" width="400.0" />
+</VBox>
