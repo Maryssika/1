@@ -7,6 +7,8 @@
 
 Клонируйте репозиторий
 
+https://github.com/Maryssika/Task-7.git
+
 # Архитектура
 
 ![ло](https://github.com/user-attachments/assets/2ce63c7d-c973-4cf7-a336-4d2de6745426)
